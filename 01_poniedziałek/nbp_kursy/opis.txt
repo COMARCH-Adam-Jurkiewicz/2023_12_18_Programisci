@@ -6,8 +6,26 @@ https://api.nbp.pl/api/exchangerates/rates/A/CHF/?format=JSON
 "currency":"frank szwajcarski",
 "code":"CHF",
 "rates":[
-{"no":"244/A/NBP/2023",
-"effectiveDate":"2023-12-18",
-"mid":4.5611}
+{"no":"244/A/NBP/2023","effectiveDate":"2023-12-18","mid":4.5611}
+]
+}
+
+https://api.nbp.pl/api/exchangerates/rates/A/CHF/2023-12-01/2023-12-14?format=JSON
+
+{"table":"A",
+"currency":"frank szwajcarski",
+"code":"CHF",
+"rates":
+[
+{"no":"233/A/NBP/2023","effectiveDate":"2023-12-01","mid":4.5670},
+{"no":"234/A/NBP/2023","effectiveDate":"2023-12-04","mid":4.5678},
+{"no":"235/A/NBP/2023","effectiveDate":"2023-12-05","mid":4.5689},
+{"no":"236/A/NBP/2023","effectiveDate":"2023-12-06","mid":4.5982},
+{"no":"237/A/NBP/2023","effectiveDate":"2023-12-07","mid":4.6027},
+{"no":"238/A/NBP/2023","effectiveDate":"2023-12-08","mid":4.5913},
+{"no":"239/A/NBP/2023","effectiveDate":"2023-12-11","mid":4.5824},
+{"no":"240/A/NBP/2023","effectiveDate":"2023-12-12","mid":4.5810},
+{"no":"241/A/NBP/2023","effectiveDate":"2023-12-13","mid":4.5827},
+{"no":"242/A/NBP/2023","effectiveDate":"2023-12-14","mid":4.5328}
 ]
 }
