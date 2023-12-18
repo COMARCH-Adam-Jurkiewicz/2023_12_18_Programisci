@@ -1,0 +1,13 @@
+Opis: https://api.nbp.pl/
+
+https://api.nbp.pl/api/exchangerates/rates/A/CHF/?format=JSON
+
+{"table":"A",
+"currency":"frank szwajcarski",
+"code":"CHF",
+"rates":[
+{"no":"244/A/NBP/2023",
+"effectiveDate":"2023-12-18",
+"mid":4.5611}
+]
+}
