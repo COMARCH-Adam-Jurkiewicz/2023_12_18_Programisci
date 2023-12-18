@@ -2,6 +2,10 @@ Ciekawe linki:
 
 * https://peps.python.org/pep-0008/ - Style Guide for Python Code
 
+Networking:
+* https://www.linkedin.com/in/adam-jurkiewicz-python-linux/
+* https://linux.social/@adam_jurkiewicz
+
 
 Biblioteki Pythonowe
 * https://requests.readthedocs.io/en/latest/
