@@ -10,6 +10,10 @@ r = requests.get(api_link)
 # print(r)
 # print(r.content)
 
-json_data = r.json()
-print(json_data)
+json_data: dict = r.json()
+# print(json_data)
 
+kursy_waluty = json_data["rates"]
+
+for element in kursy_waluty:
+    print(f"{element=}")
