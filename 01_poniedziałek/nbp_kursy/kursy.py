@@ -15,5 +15,12 @@ json_data: dict = r.json()
 
 kursy_waluty = json_data["rates"]
 
+wart = 0
+ile = 0
 for element in kursy_waluty:
     print(f"{element=}")
+    wart += element["mid"]
+    ile += 1
+
+sredni_kurs = wart / ile
+print(f'Średni kurs dla {json_data["currency"]} w okresie {start} do {finish} wynosi {sredni_kurs} zł.')
