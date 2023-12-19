@@ -7,6 +7,8 @@ class Pracownik:
         self.year = year
         self.place = place
         self.gender = "M" if name[-1] != "a" else "F"
+        self.new_salary_net = None
+        self.salary_gross = None
         print(f"Init dla obiektu: {id(self)}")
 
     def show(self):
@@ -15,10 +17,11 @@ class Pracownik:
     def set_salary(self, new_salary_net: int):
         # dodaj nową pensję miesięczną netto i brutto + 40%
         self.new_salary_net = new_salary_net
+        self.salary_gross = self.new_salary_net * 1.4
 
     def show_salary(self):
         # wypisz info o pensji netto i brutto
-        print(f"Pracownik {self.imie_nazwisko}, zatrudniony na stanowisku {self.place} od roku {self.year} zarabia aktualnie {self.new_salary_net} zł netto, co stanowi {self.new_salary_net*1.4} zł brutto.")
+        print(f"Pracownik {self.imie_nazwisko}, zatrudniony na stanowisku {self.place} od roku {self.year} zarabia aktualnie {self.new_salary_net} zł netto, co stanowi {self.salary_gross} zł brutto.")
 
 
 pracownik1 = Pracownik("Adam", "Jurkiewicz", 1999, "Administrator")
@@ -29,4 +32,6 @@ print(id(pracownik2))
 
 pracownik1.show()
 pracownik2.show()
+
+pracownik1.show_salary()
 
