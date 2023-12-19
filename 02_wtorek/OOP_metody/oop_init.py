@@ -6,8 +6,11 @@ class Pracownik:
         self.imie_nazwisko = name + surname
         self.year = year
         self.place = place
-        self.gender = "M" if
+        self.gender = "M" if name[-1] != "a" else "F"
         print("Init dla obiektu")
+
+    def show(self):
+        print(f"Pracownik {self.imie_nazwisko}, zatrudniony na stanowisku {self.place} od roku {self.year}.")
 
 
 pracownik1 = Pracownik("Adam", "Jurkiewicz", 1999, "Administrator")
