@@ -9,7 +9,7 @@ class Pracownik:
         self.place = place
         self.gender = "M" if name[-1] != "a" else "F"
         self.new_salary_net = 100
-        self.salary_gross = 140
+        self.salary_gross = 160
         print(f"Init dla obiektu: {id(self)}")
 
     def show(self):
