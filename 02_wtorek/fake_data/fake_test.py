@@ -6,4 +6,6 @@ dane = Faker(["pl_PL", "it_IT", "jp_JP",
               "tw_GH", "de_DE"])
 
 for _ in range(200):
-    print(dane.name(), dane.company())
+    print(dane.name(), dane.company(), dane.phone_number(), dane.pesel())
+
+# zamień kod tak, by generował po 20 przykładów dla 1 locale
