@@ -1,4 +1,4 @@
-# dziedziczenie + super()
+#  super()
 #
 
 class Pracownik:
@@ -8,8 +8,8 @@ class Pracownik:
         self.year = year
         self.place = place
         self.gender = "M" if name[-1] != "a" else "F"
-        self.new_salary_net = None
-        self.salary_gross = None
+        self.new_salary_net = 100
+        self.salary_gross = 140
         print(f"Init dla obiektu: {id(self)}")
 
     def show(self):
@@ -27,11 +27,16 @@ class Pracownik:
 
 class Zarzad(Pracownik):
 
+    def __init__(self, name, surname, year):
+        super().__init__(name, surname, year, "Zarząd spólki")
+        print(f"Super wykonano -> slary: {self.salary_gross}")
+
+
     def show(self):
         print(f"Cłonek zarządu: {self.imie_nazwisko} od roku {self.year}")
 
     def show_place(self):
-        print("Miejsce pracy: centrala firmy")
+        print(f"Miejsce pracy: {self.place}")
 
 
 pracownik1 = Pracownik("Adam", "Jurkiewicz", 1999, "Administrator")
@@ -51,5 +56,4 @@ czlonek1.show_place()
 
 pracownik1.show_salary()
 
-
-# pracownik1.show_place()
+czlonek1.show_salary()
