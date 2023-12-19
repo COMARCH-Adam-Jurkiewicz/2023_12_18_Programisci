@@ -35,7 +35,8 @@ class Ubezpieczony:
         return self.__pesel
 
     def wprowadz_pesel(self, wartosc: str):
-        """zwaliduj pesel i wprowadź gdy poprawny, a gdy nie:
+        """zwaliduj pesel - API: https://h88.pl/sm/api/v1/pesel/verify/?pesel=87300369749
+        i wprowadź gdy poprawny, a gdy nie:
         raise Exception("BAD PESEL")
         """
         self.__pesel = wartosc
