@@ -1,6 +1,7 @@
 Ciekawe linki:
 
 * https://peps.python.org/pep-0008/ - Style Guide for Python Code
+* https://pythontutor.com/render.html#code=wart_1%20%3D%2020%0A%0Adef%20fn01%28%29%3A%0A%20%20%20%20print%28wart_1%29%0A%0Adef%20fn02%28%29%3A%0A%20%20%20%20wart_1%20%3D%2010%0A%20%20%20%20print%28wart_1%29%0A%0Afn02%28%29%0Afn01%28%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false
 
 Networking:
 * https://www.linkedin.com/in/adam-jurkiewicz-python-linux/
