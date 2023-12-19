@@ -14,11 +14,11 @@ class Pracownik:
 
     def set_salary(self, new_salary_net: int):
         # dodaj nową pensję miesięczną netto i brutto + 40%
-        pass
+        self.new_salary_net = new_salary_net
 
     def show_salary(self):
         # wypisz info o pensji netto i brutto
-        pass
+        print(f"Pracownik {self.imie_nazwisko}, zatrudniony na stanowisku {self.place} od roku {self.year} zarabia aktualnie {self.new_salary_net} zł netto, co stanowi {self.new_salary_net*1.4} zł brutto.")
 
 
 pracownik1 = Pracownik("Adam", "Jurkiewicz", 1999, "Administrator")
