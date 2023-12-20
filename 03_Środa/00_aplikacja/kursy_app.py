@@ -26,8 +26,8 @@ while True:
         currency_values = get_values(values[0], values["DATA"], values[1])
         title = f"Wykres kursów waluty {values[0]} z {values[1]} dni przed {values['DATA']}"
         sleep(10)
-        print(title, currency_values, type(currency_values))
-        # plotting(title, currency_values,)
+        # print(title, currency_values, type(currency_values))
+        plotting(title, currency_values,)
 
 
 
