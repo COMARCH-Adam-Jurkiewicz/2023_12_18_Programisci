@@ -9,6 +9,7 @@ def measure_time(func):
         return result
     return wrapper
 
+@measure_time
 def fn_test(a, b):
     time.sleep(1.4)
     return a+b
