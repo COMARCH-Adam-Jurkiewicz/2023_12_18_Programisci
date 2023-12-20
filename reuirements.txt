@@ -1,3 +1,4 @@
 requests
 icecream
 tinydb
+PySimpleGUI
