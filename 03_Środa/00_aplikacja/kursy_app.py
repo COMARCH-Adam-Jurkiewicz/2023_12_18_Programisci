@@ -2,6 +2,7 @@ import PySimpleGUI as sg
 from time import sleep
 from functions.nbp_operations import get_values
 from functions.wykres import plotting
+from functions.markdown import mdcreate
 
 
 
@@ -30,6 +31,7 @@ while True:
         legenda_wykres = f"Waluta {values[0]}"
         leg_x, leg_y = "Legenda X", "Legenda Y"
         plotting(title, currency_values, legenda_wykres, leg_x, leg_y)
+        # mdcreate()
 
 
 

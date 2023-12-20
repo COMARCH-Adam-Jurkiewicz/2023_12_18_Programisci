@@ -12,6 +12,6 @@ def plotting(title: str, values: list[float], legenda_wykres: str, leg_x: str, l
     plt.show()
 
 if __name__ == "__main__":
-    legenda_wykres = f"Waluta XYZ"
+    legenda_wykres = "Waluta XYZ"
     leg_x, leg_y = "Legenda X", "Legenda Y"
     plotting("TEST", [4.33, 6.77, 2.55], legenda_wykres, leg_x, leg_y)
