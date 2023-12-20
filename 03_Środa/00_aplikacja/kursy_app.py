@@ -1,5 +1,5 @@
 import PySimpleGUI as sg
-
+from functions.nbp_operations import get_values
 
 
 layout = [
