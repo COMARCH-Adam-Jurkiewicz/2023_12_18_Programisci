@@ -12,4 +12,5 @@ print(a.what_name())
 print(a._name)
 a._name = "Cosik"
 print(a._name)
+print(a)
 # error --> print(a.__name)

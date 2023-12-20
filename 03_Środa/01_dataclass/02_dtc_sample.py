@@ -6,6 +6,8 @@ class Ubezpieczony:
     name: str  # will become arg in __init__
     salary: int = 0  # will become kwarg in __init__, default value!
 
+    def metoda(self):
+        self.salary = 400
 
 person1 = Ubezpieczony("Adam Jurkiewicz")
 person2 = Ubezpieczony("Beata Jurkiewicz", salary=2000)
