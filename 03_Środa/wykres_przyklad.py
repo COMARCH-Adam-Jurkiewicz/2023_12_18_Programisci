@@ -5,4 +5,6 @@ Y = [x**2 for x in X ]
 plt.plot(X,Y)
 plt.grid(True)
 plt.title("To jest wykres")
+plt.legend(["opis legendy wykresu"])
+plt.xlabel()
 plt.show()
