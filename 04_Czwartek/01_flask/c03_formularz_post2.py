@@ -1,5 +1,5 @@
 import sys
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect
 from datetime import datetime
 from funkcje_dodatkowe.page_check import check_web_page
 
@@ -19,7 +19,8 @@ def form_get():
 def form_post():
     web = request.form['web']
     link = check_web_page(web)
-    return f'Witaj! Twoja strona do sprawwdzenia to {web} - wynik to {link}.'
+    return redirect(link)
+        # f'Witaj! Twoja strona do sprawwdzenia to {web} - wynik to {link}.'
 
 
 
