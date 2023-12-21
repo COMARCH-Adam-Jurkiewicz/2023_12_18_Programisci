@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sprawdzam stronę</title>
+    <title>Strona startowa</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -12,18 +12,17 @@
 <body>
 
 <div class="jumbotron text-center">
-  <h1>Sprawdzę stronę dla Ciebie.</h1>
-  <p>Twoje IP zostanie zapisane w bazie.</p>
+  <h1>Witaj na mojej stronie powitalnej!</h1>
+    <h2>Aktualny czas serwera: {{ actual_time }} </h2>
+    <hr>
+    <h2>Wersja Pythona: {{ python_version }}</h2>
+  <p>Ta strona będzie link checkerem.</p>
 </div>
 
 <div class="container">
-  <form action="/sprawdzam" method="post">
-    <div class="form-group">
-      <label for="web">Wpisz adres strony:</label>
-      <input type="text" class="form-control" id="web" name="web">
-    </div>
-    <button type="submit" class="btn btn-primary">Wyślij</button>
-  </form>
+  <div class="row">
+      <h3>Aby uruchomić, wybierz: <a href="/sprawdzam"> Stronę do sprawdzenia</a> </h3>
+  </div>
 </div>
 
 </body>

@@ -4,7 +4,7 @@ app = Flask("moja_apka")
 
 
 @app.route("/")
-def mainpage():
+def startowa():
     return '<H1> HEJ! </H1> <a href="witam">Idź do strony.</a>'
 
 
