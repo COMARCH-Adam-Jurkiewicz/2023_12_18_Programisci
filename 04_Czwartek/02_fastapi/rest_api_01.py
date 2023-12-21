@@ -18,7 +18,7 @@ def fn_auth(request: Request,
         return HTTPException(status_code=401,
                              detail=f"AUTH Error for {auth_id} from {request.client.host}")
 
-    return {"informacja": "Połączenie poprawne"}
+    return {"informacja": f"Połączenie poprawne from {request.client.host}"}
 
 
 if __name__ == "__main__":
