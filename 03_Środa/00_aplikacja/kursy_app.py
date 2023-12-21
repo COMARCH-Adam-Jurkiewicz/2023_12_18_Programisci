@@ -1,9 +1,18 @@
 import PySimpleGUI as sg
-from time import sleep
 from functions.nbp_operations import get_values
 from functions.wykres import plotting
 from functions.markdown import mdcreate
 from functions.docx import docxcreate
+
+# logowanie zdarzeń
+import logging
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
+formatter = logging.Formatter('%(asctime)s - %(message)s')
+handler = logging.FileHandler('kursy.log')
+handler.setFormatter(formatter)
+logger.addHandler(handler)
+##############################
 
 
 layout = [
@@ -18,6 +27,8 @@ layout = [
 
 window = sg.Window('Aplikacja tworząca wykres waluty', layout)
 
+logger.debug('START')
+
 while True:
     event, values = window.read()
 
@@ -25,22 +36,19 @@ while True:
         break
 
     if event == "Ok":
+        logger.debug("Wywołanie get values")
         currency_values = get_values(values[0], values["DATA"], values[1])
         title = f"Wykres kursów waluty {values[0]} z {values[1]} dni przed {values['DATA']}"
         # print(title, currency_values, type(currency_values))
         filename = values[2]
         legenda_wykres = f"Waluta {values[0]}"
         leg_x, leg_y = "Legenda X", "Legenda Y"
+        logger.debug("Wywołanie plotting")
         plotting(title, currency_values, legenda_wykres, leg_x, leg_y, filename=f"{filename}.png")
+        logger.debug("Wywołanie mdcreate")
         mdcreate(legenda_wykres, values['DATA'], currency_values, filename, picture=f"{filename}.png" )
+        logger.debug("Wywołanie docxcreate")
         docxcreate(filename)
 
-
-
-
-
-
-
-
-
+logger.debug("KONIEC APP")
 window.close()
